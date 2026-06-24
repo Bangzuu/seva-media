@@ -33,7 +33,7 @@
       </feComponentTransfer>
     </filter>
   </defs>
-  <rect width="360" height="360" fill="#f1ede4" />
+  <rect width="360" height="360" fill="#e6ded3" />
   <rect width="360" height="360" filter="url(#fiber)" opacity="0.32" />
   <rect width="360" height="360" filter="url(#fine)" opacity="0.9" />
 </svg>
