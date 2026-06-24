@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs>
+    <filter id="fine" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.72"
+        numOctaves="5"
+        seed="17"
+        stitchTiles="stitch"
+      />
+      <feColorMatrix type="saturate" values="0" />
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.72" intercept="0.16" />
+        <feFuncG type="linear" slope="0.67" intercept="0.19" />
+        <feFuncB type="linear" slope="0.58" intercept="0.23" />
+        <feFuncA type="linear" slope="0.36" />
+      </feComponentTransfer>
+    </filter>
+    <filter id="fiber" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.035 0.11"
+        numOctaves="4"
+        seed="43"
+        stitchTiles="stitch"
+      />
+      <feColorMatrix type="saturate" values="0" />
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.6" intercept="0.23" />
+        <feFuncG type="linear" slope="0.55" intercept="0.25" />
+        <feFuncB type="linear" slope="0.47" intercept="0.29" />
+        <feFuncA type="linear" slope="0.08" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="360" height="360" fill="#f1ede4" />
+  <rect width="360" height="360" filter="url(#fiber)" opacity="0.32" />
+  <rect width="360" height="360" filter="url(#fine)" opacity="0.9" />
+</svg>
