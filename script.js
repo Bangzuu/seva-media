@@ -1,4 +1,4 @@
-const accordionItems = [...document.querySelectorAll(".info-column")];
+const accordionItems = [...document.querySelectorAll("details.info-column")];
 const mobileQuery = window.matchMedia("(max-width: 600px)");
 
 function setMobileAccordionState() {

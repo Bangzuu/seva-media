@@ -5,6 +5,14 @@
   --layout-unit: min(1vw, 1.235vh);
 }
 
+@font-face {
+  font-family: "Garet";
+  src: url("assets/fonts/Garet-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -112,11 +120,11 @@ h1 {
   width: 36.15vw;
   max-width: 100%;
   margin: 0;
-  font-family: "Bodoni Moda", Didot, "Times New Roman", serif;
+  font-family: "Garet", "Inter", sans-serif;
   font-size: 10.15vw;
   font-weight: 500;
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  line-height: 0.86;
+  letter-spacing: -0.07em;
   text-align: left;
   text-transform: uppercase;
 }
@@ -528,6 +536,22 @@ footer {
   }
 
   .info-column[open] > .accordion-content {
+    display: block;
+  }
+
+  .contact-column {
+    padding-top: 20px;
+  }
+
+  .contact-column > .section-label {
+    cursor: default;
+  }
+
+  .contact-column > .section-label::after {
+    content: none;
+  }
+
+  .contact-column > .accordion-content {
     display: block;
   }
 
