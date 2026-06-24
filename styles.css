@@ -309,7 +309,8 @@ h1 span {
   top: calc(1.22 * var(--layout-unit));
   left: calc(1.22 * var(--layout-unit));
   font-family: "DM Mono", monospace;
-  font-size: calc(1.1 * var(--layout-unit));
+  font-size: calc(1.15 * var(--layout-unit));
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   pointer-events: none;
@@ -324,6 +325,7 @@ h1 span {
   color: var(--ink);
   background: rgba(255, 255, 255, 0.04);
   font: inherit;
+  font-weight: 500;
   transition:
     background 160ms ease,
     border-color 160ms ease;
@@ -362,7 +364,8 @@ h1 span {
   color: var(--paper);
   background: var(--ink);
   font-family: "DM Mono", monospace;
-  font-size: calc(1.34 * var(--layout-unit));
+  font-size: calc(1.42 * var(--layout-unit));
+  font-weight: 500;
   letter-spacing: 0.085em;
   text-transform: uppercase;
   cursor: pointer;
@@ -395,7 +398,8 @@ footer {
   color: #f4f0e7;
   background: #090a09;
   font-family: "DM Mono", monospace;
-  font-size: calc(1.1 * var(--layout-unit));
+  font-size: calc(1.15 * var(--layout-unit));
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -545,8 +549,27 @@ footer {
     margin-top: 48px;
   }
 
+  .contact-form label > span {
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .contact-form input,
   .contact-form textarea {
-    min-height: 190px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .contact-form input {
+    height: 64px;
+    padding: 30px 15px 8px;
+  }
+
+  .contact-form textarea {
+    min-height: 210px;
+    padding: 42px 15px 15px;
   }
 
   .contact-form button {
@@ -554,7 +577,10 @@ footer {
     justify-self: stretch;
     justify-content: center;
     margin-top: 20px;
-    padding: 14px 18px;
+    min-height: 54px;
+    padding: 15px 18px;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   footer {
@@ -562,6 +588,9 @@ footer {
     gap: 22px;
     min-height: 150px;
     padding: 34px 26px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
   }
 
   footer span:nth-child(even) {
