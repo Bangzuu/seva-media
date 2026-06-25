@@ -466,8 +466,8 @@ footer {
   }
 
   .intro {
-    min-height: clamp(580px, 145vw, 680px);
-    padding: 28px 26px 54px;
+    min-height: clamp(520px, 100vw, 550px);
+    padding: 28px 26px 32px;
   }
 
   .logo {
@@ -533,7 +533,7 @@ footer {
   }
 
   .information {
-    padding: 68px 26px 50px;
+    padding: 42px 26px 50px;
   }
 
   .information-grid {
