@@ -310,6 +310,10 @@ h1 span {
   font-weight: 700;
 }
 
+.services-list .service-highlight {
+  font-weight: 700;
+}
+
 .services-list .services-closing {
   margin-top: calc(1.8 * var(--layout-unit));
   font-weight: 600;
