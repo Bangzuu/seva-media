@@ -311,7 +311,11 @@ h1 span {
 }
 
 .services-list .service-highlight {
+  margin-bottom: calc(2 * var(--layout-unit));
+  font-size: calc(2.05 * var(--layout-unit));
   font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
 }
 
 .services-list .services-closing {
@@ -608,6 +612,14 @@ footer {
   .services-list .services-closing {
     margin-top: 26px;
     font-weight: 600;
+  }
+
+  .services-list .service-highlight {
+    margin-bottom: 26px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
   }
 
   .contact-form {
