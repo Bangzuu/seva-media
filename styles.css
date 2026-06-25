@@ -253,8 +253,8 @@ h1 span {
 
 .information-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: calc(6.8 * var(--layout-unit));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: calc(3.6 * var(--layout-unit));
 }
 
 .section-label {
@@ -295,8 +295,8 @@ h1 span {
 }
 
 .services-list {
-  max-width: calc(30 * var(--layout-unit));
-  margin-top: calc(1.95 * var(--layout-unit));
+  max-width: 100%;
+  margin-top: 0;
 }
 
 .services-list p {
