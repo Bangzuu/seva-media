@@ -294,6 +294,27 @@ h1 span {
   line-height: 1.65;
 }
 
+.services-list {
+  max-width: calc(30 * var(--layout-unit));
+  margin-top: calc(1.95 * var(--layout-unit));
+}
+
+.services-list p {
+  margin: 0 0 calc(1.35 * var(--layout-unit));
+  font-size: calc(1.28 * var(--layout-unit));
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.services-list strong {
+  font-weight: 700;
+}
+
+.services-list .services-closing {
+  margin-top: calc(1.8 * var(--layout-unit));
+  font-weight: 600;
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 46.4fr 53.6fr;
@@ -566,6 +587,23 @@ footer {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.65;
+  }
+
+  .services-list {
+    max-width: 100%;
+    margin-top: 24px;
+  }
+
+  .services-list p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.65;
+  }
+
+  .services-list .services-closing {
+    margin-top: 26px;
+    font-weight: 600;
   }
 
   .contact-form {
