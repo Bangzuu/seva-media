@@ -253,8 +253,9 @@ h1 span {
 
 .information-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: calc(3.6 * var(--layout-unit));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: calc(5.2 * var(--layout-unit));
+  row-gap: calc(2.4 * var(--layout-unit));
 }
 
 .section-label {
@@ -281,7 +282,7 @@ h1 span {
 .accordion-content h2 {
   margin: 0;
   font-size: calc(2.52 * var(--layout-unit));
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.14;
   letter-spacing: -0.045em;
 }
@@ -312,15 +313,25 @@ h1 span {
 
 .services-list .service-highlight {
   margin-bottom: calc(2 * var(--layout-unit));
-  font-size: calc(2.05 * var(--layout-unit));
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -0.035em;
+  font-size: calc(2.52 * var(--layout-unit));
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.045em;
 }
 
 .services-list .services-closing {
   margin-top: calc(1.8 * var(--layout-unit));
   font-weight: 600;
+}
+
+.contact-column {
+  grid-column: 1 / -1;
+  width: auto;
+  margin-top: calc(1.8 * var(--layout-unit));
+}
+
+.contact-column .accordion-content > p {
+  max-width: none;
 }
 
 .contact-form {
@@ -569,6 +580,9 @@ footer {
   }
 
   .contact-column {
+    grid-column: auto;
+    width: auto;
+    margin-top: 0;
     padding-top: 20px;
   }
 
@@ -586,7 +600,7 @@ footer {
 
   .accordion-content h2 {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.12;
   }
 
@@ -616,10 +630,10 @@ footer {
 
   .services-list .service-highlight {
     margin-bottom: 26px;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.03em;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -0.045em;
   }
 
   .contact-form {
