@@ -351,6 +351,15 @@ h1 span {
   display: block;
 }
 
+.honeypot {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  clip: rect(0, 0, 0, 0);
+}
+
 .contact-form label > span {
   position: absolute;
   z-index: 1;
@@ -434,6 +443,34 @@ h1 span {
   outline-offset: 4px;
 }
 
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.64;
+}
+
+.form-status {
+  grid-column: 2;
+  justify-self: end;
+  max-width: calc(32 * var(--layout-unit));
+  margin: calc(0.55 * var(--layout-unit)) 0 0;
+  font-size: calc(1.12 * var(--layout-unit));
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status[data-status="success"] {
+  color: #26371e;
+}
+
+.form-status[data-status="error"] {
+  color: #6f221f;
+}
+
 footer {
   display: grid;
   grid-template-columns: auto auto 1fr auto;
@@ -450,6 +487,102 @@ footer {
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.thank-you-page {
+  min-height: 100vh;
+  padding-inline: 0;
+  background-color: var(--paper);
+  background-image: url("assets/paper-grain.svg");
+  background-repeat: repeat;
+  background-size: 360px 360px;
+}
+
+.thank-you-main {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  padding: clamp(28px, 5vw, 68px);
+  isolation: isolate;
+}
+
+.thank-you-main::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url("assets/paper-grain.svg");
+  background-position: 173px 91px;
+  background-size: 520px 520px;
+  content: "";
+  mix-blend-mode: multiply;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.thank-you-logo-link,
+.thank-you-card {
+  position: relative;
+  z-index: 1;
+}
+
+.thank-you-logo-link {
+  width: clamp(62px, 8.9vw, 128px);
+  height: max-content;
+}
+
+.thank-you-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.thank-you-card {
+  align-self: center;
+  max-width: 760px;
+  margin-left: clamp(0px, 5.9vw, 92px);
+  padding-bottom: clamp(60px, 9vw, 120px);
+}
+
+.thank-you-card .section-label {
+  max-width: 520px;
+  margin-bottom: clamp(28px, 3.5vw, 50px);
+}
+
+.thank-you-card h1 {
+  width: auto;
+  max-width: none;
+  font-size: clamp(76px, 11vw, 170px);
+  font-weight: 520;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  text-transform: none;
+}
+
+.thank-you-card p:not(.section-label) {
+  max-width: 580px;
+  margin: clamp(30px, 4vw, 56px) 0 0;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.thank-you-link {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 34px);
+  margin-top: clamp(42px, 5.5vw, 76px);
+  color: var(--ink);
+  font-family: "DM Mono", monospace;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.thank-you-link:hover .arrow,
+.thank-you-link:focus-visible .arrow {
+  transform: translateX(7px);
 }
 
 @media (max-width: 600px) {
@@ -675,6 +808,15 @@ footer {
     font-weight: 500;
   }
 
+  .form-status {
+    grid-column: 1;
+    justify-self: stretch;
+    max-width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: left;
+  }
+
   footer {
     grid-template-columns: 1fr 1fr;
     gap: 22px;
@@ -687,6 +829,45 @@ footer {
 
   footer span:nth-child(even) {
     text-align: right;
+  }
+
+  .thank-you-main {
+    min-height: 100svh;
+    padding: 28px 26px 48px;
+  }
+
+  .thank-you-logo-link {
+    width: 62px;
+  }
+
+  .thank-you-card {
+    align-self: center;
+    margin-left: 0;
+    padding-bottom: 36px;
+  }
+
+  .thank-you-card .section-label {
+    margin-bottom: 34px;
+    padding-right: 0;
+  }
+
+  .thank-you-card .section-label::after {
+    content: none;
+  }
+
+  .thank-you-card h1 {
+    font-size: clamp(68px, 20vw, 104px);
+  }
+
+  .thank-you-card p:not(.section-label) {
+    margin-top: 36px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .thank-you-link {
+    margin-top: 46px;
+    font-size: 14px;
   }
 }
 

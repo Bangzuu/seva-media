@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@400;500&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260625-11" />
+    <link rel="stylesheet" href="styles.css?v=20260626-1" />
   </head>
   <body>
     <main>
@@ -128,7 +128,11 @@
           </article>
         </div>
 
-        <form class="contact-form" aria-labelledby="contact-form-title">
+        <form
+          class="contact-form"
+          aria-labelledby="contact-form-title"
+          data-form-endpoint="https://script.google.com/macros/s/AKfycbzXN8GrOaYs2-wfCzXuSLU0PT6qmeWUWmFXyFQ-EQiJM0jjgsugQGW2OXPlBOXzmbiPnQ/exec"
+        >
           <h2 class="visually-hidden" id="contact-form-title">Contact form</h2>
           <div class="field-stack">
             <label>
@@ -141,7 +145,13 @@
             </label>
             <label>
               <span>Email</span>
-              <input type="email" name="email" autocomplete="email" required />
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                required
+              />
             </label>
           </div>
 
@@ -150,10 +160,21 @@
             <textarea name="message" required></textarea>
           </label>
 
+          <label class="honeypot" aria-hidden="true" tabindex="-1">
+            <span>Website</span>
+            <input
+              type="text"
+              name="website"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </label>
+
           <button type="submit">
             <span>Send</span>
             <span class="arrow" aria-hidden="true">⟶</span>
           </button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>
@@ -164,6 +185,6 @@
       <span>London, UK</span>
       <span>All rights reserved</span>
     </footer>
-    <script src="script.js?v=20260624-3"></script>
+    <script src="script.js?v=20260626-2"></script>
   </body>
 </html>
